@@ -1,0 +1,146 @@
+//
+// responsive
+// ----------------------------------------------------
+
+
+@media (max-width: 575px) {
+    .btns {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .services .container,
+    .hero .container {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .container {
+        width: 88%;
+    }
+    
+    .btns,
+    .footer .center,
+    .footer .social,
+    .contacts .container,
+    .faq .container,
+    .team .container,
+    .about-us .container,
+    .benefits .heading,
+    .services .content,
+    .services .heading,
+    .hero .container {
+        justify-content: center;
+    }
+
+    .box,
+    .footer .links,
+    .footer .bottom p,
+    .title-2,
+    .paragraph,
+    .benefits .bottom p,
+    .services .heading,
+    .hero .info {
+        text-align: center;
+    }
+
+    .benefits .bottom b,
+    .footer .top b,
+    .sub-title {
+        display: block;
+        text-align: center;
+    }
+
+    .box,
+    .heading,
+    .benefits .bottom,
+    .footer .center,
+    .footer .banner,
+    .footer .top {
+        flex-direction: column;
+    }
+
+    .footer .banner {
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .footer img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer .top b {
+        margin: 2rem 0;
+    }
+
+    .footer .banner {
+        align-items: center !important;
+        margin-top: 2.5rem;
+    }
+
+    .about-us .btns,
+    .hero .btns {
+        margin-bottom: 5rem;
+    }
+
+    .contacts form,
+    .faq .accordion,
+    .team .info,
+    .services ul {
+        margin-top: 5rem;
+    }
+
+    #js-testimonials .btns {
+        display: none !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .faq .info,
+    .faq .accordion,
+    .hero .info,
+    .about-us .info,
+    .about-us figure,
+    .team .info,
+    .team figure,
+    .contacts .info,
+    .contacts form,
+    .services figure,
+    .services .info,
+    .hero figure {
+        max-width: 48% !important;
+    }
+
+    .services .content {
+        align-items: flex-start;
+    }
+
+    .benefits .card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .header .menu {
+        display: none;
+    }
+
+    .header img {
+        max-width: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-menu {
+        display: none;
+    }
+}

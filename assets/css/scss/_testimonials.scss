@@ -1,0 +1,39 @@
+//
+// testimonials
+// ----------------------------------------------------
+
+.testimonials {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid;
+
+    .heading {
+        margin-bottom: 5rem;
+    }
+
+    .next,
+    .prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid;
+    }
+
+    .btns {
+        gap: 10px;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 4rem;
+    }
+}

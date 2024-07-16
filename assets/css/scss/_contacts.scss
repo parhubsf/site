@@ -1,0 +1,43 @@
+//
+// contacts
+// ----------------------------------------------------
+
+.contacts {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .info {
+            width: 100%;
+            max-width: 43rem;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3rem;
+
+        i { font-size: 3.2rem; }
+
+        b { display: block; }
+    }
+
+    form {
+        width: 100%;
+        max-width: 49.8rem;
+    }
+}

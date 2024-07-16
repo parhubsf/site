@@ -1,0 +1,46 @@
+//
+// benefits
+// ----------------------------------------------------
+
+.benefits {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid;
+
+    ul {
+        display: grid;
+        @media (max-width: 575px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        gap: 3.2rem;
+        margin-top: 5rem;
+    }
+
+    h3 {
+        margin: 1rem 0;
+    }
+
+    .card {
+        height: 22rem;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 3rem;
+
+        i {
+            font-size: 2.4rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+    }
+}

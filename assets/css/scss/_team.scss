@@ -1,0 +1,27 @@
+//
+// teams
+// ----------------------------------------------------
+
+.team {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info {
+        width: 100%;
+        max-width: 54.2rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+}
