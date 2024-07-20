@@ -6,18 +6,21 @@
     width: 100%;
     padding-top: 7rem;
     padding-bottom: 7rem;
+    background-color: #011f53;
 
     .top,
     .center {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        color: #CDD7EA;
     
         b {
             display: inline-block;
             margin-bottom: 1.5rem;
             font-size: 16px;
             line-height: 24px;
+            color: #fff;
         }
     }
 
@@ -38,26 +41,34 @@
             line-height: 2.1rem;
             -webkit-transition: all 300ms ease .0s;
             transition: all 300ms ease .0s;
+            color: #CDD7EA;
 
             &:hover {
                 text-decoration: underline;
+                color: #fff;
             }
         }
     }
 
     .bottom {
         width: 100%;
+        padding-top: 5rem;
+        border-top: 1px solid rgba(255,255,255,.2);
 
         p {
             font-size: 1.3rem;
             line-height: 2.1rem;
             text-align: justify;
+            color: #CDD7EA;
+
+            b { color: #fff; }
         }
 
         a {
             text-decoration: underline;
             -webkit-transition: all 300ms ease .0s;
             transition: all 300ms ease .0s;
+            color: #fff;
 
             &:hover {
                 text-decoration: none;
@@ -75,7 +86,19 @@
         }
 
         a {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            color: rgba(35,116,230,1);
+            background-color: rgba(35,116,230,.2);
+            border-radius: 100%;
+
+            &:hover {
+                color: #fff;
+                background-color: rgba(35,116,230,1);
+            }
         }
     }
 
@@ -94,12 +117,14 @@
 
         i {
             font-size: 32px;
+            color: #2374e7;
         }
 
         a {
             text-decoration: underline;
             -webkit-transition: all 300ms ease .0s;
             transition: all 300ms ease .0s;
+            color: #2374e7;
 
             &:hover {
                 text-decoration: none;

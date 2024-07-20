@@ -6,7 +6,6 @@
     width: 100%;
     padding-top: 15rem;
     padding-bottom: 8rem;
-    border-bottom: 1px solid;
 
     .container {
         display: flex;
@@ -19,10 +18,20 @@
         }
     }
 
+    span {
+        color: #2374e6;
+    }
+
+    h2 {
+        color: #011f53;
+        b { color: #2374e6; }
+    }
+
     p {
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 2.1rem;
+        color: #375281;
     }
 
     .box {
@@ -30,8 +39,12 @@
         align-items: center;
         gap: 1rem;
         margin-top: 3rem;
+        color: #375281;
 
-        i { font-size: 3.2rem; }
+        i { 
+            font-size: 3.2rem; 
+            color: #2374e6;
+        }
 
         b { display: block; }
     }
@@ -39,5 +52,24 @@
     form {
         width: 100%;
         max-width: 49.8rem;
+        padding: 4rem;
+        border-radius: 2rem;
+        border: 3px solid #eee;
+
+        label {
+            color: #375281;
+        }
+
+        button {
+            color: #fff;
+            background-color: #2374e6;
+            border-color: #2374e6;
+        }
+    }
+
+    .btn {
+        color: #fff;
+        background-color: #2374e6;
+        border-color: #2374e6;
     }
 }

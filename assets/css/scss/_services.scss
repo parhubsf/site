@@ -6,6 +6,7 @@
     width: 100%;
     padding-top: 15rem;
     padding-bottom: 8rem;
+    background-color: #011f53;
 
     .container {
         display: flex;
@@ -16,7 +17,16 @@
     h2 {
         width: 100%;
         max-width: 58.9rem;
-        color: #333;
+        color: #fff;
+        b { color: #2374e6; }
+    }
+
+    span {
+        color: #2374e6;
+    }
+
+    p {
+        color: #CDD7EA;
     }
 
     .content {
@@ -48,8 +58,9 @@
             width: 4.8rem;
             height: 4.8rem;
             font-size: 2.1rem;
+            color: #2374e6;
             border-radius: 0.7rem;
-            background-color: #D9D9D9;
+            background-color: rgba(35,116,230,0.2);
         }
     }
 
@@ -57,6 +68,7 @@
         font-weight: 600;
         font-size: 1.8rem;
         line-height: 2.4rem;
+        color: #fff;
     }
 
     p {
@@ -64,10 +76,16 @@
         font-weight: 400;
         font-size: 1.4rem;
         line-height: 2.1rem;
-        color: #595959;
+        color: #CDD7EA;
     }
 
     span {
-        color: #2f3f72;
+        color: #2374e6;
+    }
+
+    .btn {
+        color: #fff;
+        background-color: #2374e6;
+        border-color: #2374e6;
     }
 }

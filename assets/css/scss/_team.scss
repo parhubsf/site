@@ -6,7 +6,7 @@
     width: 100%;
     padding-top: 15rem;
     padding-bottom: 8rem;
-    border-bottom: 1px solid;
+    background-color: #011f53;
 
     .container {
         display: flex;
@@ -18,10 +18,30 @@
     .info {
         width: 100%;
         max-width: 54.2rem;
+
+        span {
+            color: #2374e6;
+        }
+    
+        h2 {
+            color: #fff;
+            b { color: #2374e6; }
+        }
+
+        p {
+            color: #CDD7EA;
+        }
     }
 
     p {
         font-size: 1.4rem;
         line-height: 2.1rem;
+        color: #CDD7EA;
+    }
+
+    .btn-whats {
+        color: #fff;
+        background-color: #2374e6;
+        border-color: #2374e6;
     }
 }

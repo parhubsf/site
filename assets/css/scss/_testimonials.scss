@@ -6,10 +6,18 @@
     width: 100%;
     padding-top: 15rem;
     padding-bottom: 8rem;
-    border-bottom: 1px solid;
 
     .heading {
         margin-bottom: 5rem;
+
+        span {
+            color: #2374e6;
+        }
+    
+        h2 {
+            color: #011f53;
+            b { color: #2374e6; }
+        }
     }
 
     .next,
@@ -21,8 +29,9 @@
         height: 4rem;
         font-size: 1.6rem;
         cursor: pointer;
+        color: #fff;
         border-radius: 50%;
-        border: 1px solid;
+        background-color: #2374e6;
     }
 
     .btns {
@@ -35,5 +44,26 @@
         justify-content: center;
         gap: 1rem;
         margin-top: 4rem;
+        
+        &-bullet {
+            background-color: rgba(255,255,255,.7);
+        }
+    }
+
+    .card {
+        background-color: #fff;
+        border-color: #2374E70D;
+
+        i {
+            color: #2374e6;
+        }
+
+        &-info {
+            color: #011f53;
+        }
+
+        &-body {
+            color: #375281;
+        }
     }
 }

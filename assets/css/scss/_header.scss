@@ -44,12 +44,12 @@
             display: inline-block;
             font-weight: 500;
             font-size: 1.4rem;
-            color: #333;
+            color: #375281;
             transition: all 300ms ease .0s;
 
             &:hover,
             &.active {
-                color: #6089d0;
+                color: #2374e6;
             }
         }
     }
@@ -60,12 +60,14 @@
         gap: 1rem;
         font-size: 1.4rem;
         line-height: 2.4rem;
-        color: #fff;
-        background-color: #6089d0;
-        border: none;
+        color: #fff !important;
+        background-color: #2374e6;
+        border-color: #2374e6;
 
         &:hover {
-            color: #fff;
+            font-weight: 500;
+            color: #fff !important;
+            background-color: #2374e6;
         }
 
         i { 
