@@ -9,7 +9,7 @@
     <!-- .typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600&family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,8 +21,9 @@
     <!-- .stylesheets -->
     <link rel="stylesheet" href="assets/css/theme.min.css">
 
-    <!-- Ajustes responsivos (já aprovados) -->
+    <!-- Ajustes responsivos e estilos complementares -->
     <style>
+        /* ========== RESPONSIVIDADE GERAL ========== */
         @media (max-width: 768px) {
             .container {
                 padding-left: 20px;
@@ -69,6 +70,38 @@
             .menu:not(.menu-mobile .menu) {
                 display: none;
             }
+            .menu-mobile {
+                background: #ffffff !important; /* fundo branco */
+            }
+            .menu-mobile .menu-item {
+                color: #288cff !important;      /* texto azul */
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: none;
+                letter-spacing: 0.3px;
+            }
+            .menu-mobile .menu-item:hover {
+                color: #0059ff !important;
+            }
+            /* Botão WhatsApp no menu mobile */
+            .menu-mobile .menu-item[href*="wa.me"] {
+                background: #1a64cc !important;   /* fundo azul sempre visível */
+                color: #ffffff !important;        /* texto branco */
+                border-radius: 30px;
+                padding: 10px 20px;
+                display: inline-block;
+                text-align: center;
+                margin-top: 10px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: background 0.2s;
+                border: 1px solid #1a64cc;
+
+            }
+            .menu-mobile .menu-item[href*="wa.me"]:hover {
+                background: #1b74e9 !important;
+                color: #ffffff !important;
+            }
             .hero figure,
             .services .content figure,
             .about-us figure,
@@ -77,6 +110,40 @@
             }
             .accordion .accordion-title {
                 font-size: 14px;
+            }
+            /* Ajuste do banner no mobile */
+            .banner-escrow-inner {
+                padding: 20px !important;
+            }
+            .banner-features {
+                padding: 16px 20px 20px !important;
+            }
+            .banner-headline {
+                font-size: 18px !important;
+            }
+            .banner-logo {
+                font-size: 24px !important;
+            }
+            /* Centraliza selo de confiança */
+            .trust-seal {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            /* Ajusta o chat widget para mobile */
+            .chat-widget {
+                width: calc(100vw - 20px) !important;
+                right: 10px !important;
+                bottom: 100px !important;
+                max-height: 70vh !important;
+            }
+            .chat-button {
+                bottom: 20px;
+                right: 20px;
+                width: 56px;
+                height: 56px;
+            }
+            .chat-button i {
+                font-size: 24px;
             }
         }
         @media (max-width: 480px) {
@@ -88,6 +155,18 @@
             }
             .benefits ul li {
                 flex: 0 0 100%;
+            }
+            .banner-escrow-inner {
+                padding: 16px !important;
+            }
+            .banner-headline {
+                font-size: 16px !important;
+            }
+            .banner-logo {
+                font-size: 20px !important;
+            }
+            .banner-subtext {
+                font-size: 11px !important;
             }
         }
 
@@ -218,17 +297,6 @@
             border-top: 1px solid rgba(4, 81, 143, 0.1);
             padding-top: 12px;
         }
-        @media (max-width: 768px) {
-            .banner-escrow-inner {
-                padding: 20px;
-            }
-            .banner-features {
-                padding: 16px 20px 20px;
-            }
-            .banner-headline {
-                font-size: 18px;
-            }
-        }
 
         /* ========== ESTILOS DO TOAST (notificação animada) ========== */
         .toast {
@@ -335,7 +403,6 @@
         #escrow .heading .sub-title {
             font-size: 21px;
             color: #1291e6;
-            /* outras propriedades */
         }
         #escrow .heading .title-2,
         #escrow .heading .trust-seal {
@@ -404,12 +471,10 @@
         /* ========== FIM DOS ESTILOS DOS MODAIS ========== */
 
         /* ========== AJUSTE HEADER: FUNDO BRANCO E REMOÇÃO DO BOTÃO TOPO ========== */
-        /* Força o fundo branco no header */
         .header {
             background: #ffffff !important;
             box-shadow: 0 2px 10px rgb(179, 179, 179);
         }
-        /* Ajuste de cores do menu para contraste com fundo branco */
         .header .menu a {
             color: #0b2d55 !important;
         }
@@ -419,7 +484,6 @@
         .btn-menu i {
             color: #050505;
         }
-        /* Remove o botão de voltar ao topo (caso exista) */
         .btn-top {
             display: none !important;
         }
@@ -465,15 +529,12 @@
             font-size: 1.2em;
         }
         .section-subtitle--services,
-        
         .section-subtitle--escrow {
             color: #00E5FF;
         }
-        /* Move o subtítulo e a lista para cima na seção Serviços */
-            #services .info {
-            margin-top: -30px;  /* valores negativos sobem, positivos descem */
+        #services .info {
+            margin-top: -30px;
         }
-        
         /* ========== FIM SUBTÍTULOS ========== */
 
         /* ========== CORREÇÃO DE ESPAÇAMENTO ENTRE DEPOIMENTOS E DÚVIDAS FREQUENTES ========== */
@@ -636,6 +697,7 @@
         }
         .chat-input-area button:hover { background: #33EAFF; }
         .error-message { color: #ff6b6b; font-size: 12px; margin-top: -5px; margin-bottom: 8px; }
+        /* ========== FIM CHAT FLUTUANTE ========== */
     </style>
 </head>
 <body>
@@ -1432,6 +1494,25 @@
         </div>
     </div>
 
+    <!-- Menu mobile -->
+    <div class="menu-mobile">
+        <div class="close-btn">&times;</div>
+        <div class="content">
+            <nav class="menu">
+                <a href="#hero" class="menu-item active">Início</a>
+                <a href="#services" class="menu-item">Serviços</a>
+                <a href="#escrow" class="menu-item">Conta Escrow</a>
+                <a href="#benefits" class="menu-item">Benefícios</a>
+                <a href="#about-us" class="menu-item">Sobre a Parhub</a>
+                <a href="#team" class="menu-item">Equipe</a>
+                <a href="#testimonials" class="menu-item">Depoimentos</a>
+                <a href="#faq" class="menu-item">Dúvidas</a>
+                <a href="https://wa.me/5511992007886" class="menu-item">Fale com um especialista</a>
+            </nav>
+        </div>
+    </div>
+    <div class="menu-mobile-shadow"></div>
+
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/theme.min.js"></script>
@@ -1446,6 +1527,42 @@
                     breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
                 });
             }
+        });
+    </script>
+
+    <!-- Script do menu mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnMenu = document.querySelector('.btn-menu');
+            const menuMobile = document.querySelector('.menu-mobile');
+            const closeBtn = document.querySelector('.menu-mobile .close-btn');
+            const menuShadow = document.querySelector('.menu-mobile-shadow');
+            const menuItems = document.querySelectorAll('.menu-mobile .menu-item');
+
+            if (btnMenu && menuMobile) {
+                btnMenu.addEventListener('click', function() {
+                    menuMobile.classList.add('active');
+                    if (menuShadow) menuShadow.classList.add('active');
+                });
+            }
+            if (closeBtn && menuMobile) {
+                closeBtn.addEventListener('click', function() {
+                    menuMobile.classList.remove('active');
+                    if (menuShadow) menuShadow.classList.remove('active');
+                });
+            }
+            if (menuShadow) {
+                menuShadow.addEventListener('click', function() {
+                    menuMobile.classList.remove('active');
+                    menuShadow.classList.remove('active');
+                });
+            }
+            menuItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    menuMobile.classList.remove('active');
+                    if (menuShadow) menuShadow.classList.remove('active');
+                });
+            });
         });
     </script>
 
@@ -1607,10 +1724,9 @@
                 if (currentState === 'start') {
                     selectedService = choice;
                     if (selectedService === 'Conta Escrow') {
-                        // Fluxo especial para Conta Escrow
                         addMessage(`Você gostaria de abrir a conta ou falar diretamente com um especialista para saber mais sobre ela?`, false);
                         addOptions(['Abrir conta', 'Falar com especialista']);
-                        currentState = 'waitingEscrowAction'; // novo estado
+                        currentState = 'waitingEscrowAction';
                         setResetButtonVisibility();
                         return;
                     } else {
@@ -1626,7 +1742,6 @@
                         setTimeout(() => {
                             window.open('assistente.html', '_blank');
                         }, 1000);
-                        // Não reseta o chat, apenas mantém o botão voltar
                     } else if (choice === 'Falar com especialista') {
                         addMessage(`📞 Redirecionando você para falar com nosso especialista via WhatsApp.`, false);
                         setTimeout(() => {
@@ -1700,7 +1815,6 @@
             chatClose.onclick = () => chatWidget.style.display = 'none';
             chatWidget.addEventListener('click', e => e.stopPropagation());
             window.addEventListener('click', e => { if (!chatWidget.contains(e.target) && !chatButton.contains(e.target) && chatWidget.style.display === 'flex') chatWidget.style.display = 'none'; });
-            // inicializa visibilidade
             setResetButtonVisibility();
         })();
     </script>
