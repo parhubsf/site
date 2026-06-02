@@ -272,93 +272,6 @@
   .toast.visible { transform: translateX(-50%) translateY(0); }
   .toast.error { border-color: rgba(255,77,77,0.4); }
 
-  .admin-toggle {
-    position: fixed; bottom: 24px; right: 24px;
-    background: linear-gradient(135deg, #0097A7, #00E5FF);
-    border: none; border-radius: 50%;
-    width: 52px; height: 52px; font-size: 22px;
-    cursor: pointer; box-shadow: 0 4px 20px rgba(0,229,255,0.3);
-    z-index: 1000; transition: transform 0.2s;
-    color: #0A1A2B;
-  }
-  .admin-toggle:hover { transform: scale(1.1); }
-
-  .admin-panel {
-    position: fixed; top: 0; right: 0;
-    width: 380px; height: 100vh;
-    background: #0A1A2B; border-left: 1px solid #1F2C34;
-    z-index: 999; display: none; flex-direction: column;
-    overflow: hidden; box-shadow: -10px 0 40px rgba(0,0,0,0.6);
-  }
-  .admin-panel.open { display: flex; }
-
-  .admin-header {
-    background: #0F2137; padding: 16px 20px;
-    display: flex; align-items: center; justify-content: space-between;
-    border-bottom: 1px solid #1F2C34;
-  }
-  .admin-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--gold); letter-spacing: 2px; }
-  .admin-close { background: none; border: none; color: #8696A0; font-size: 20px; cursor: pointer; }
-
-  .admin-tabs { display: flex; border-bottom: 1px solid #1F2C34; }
-  .admin-tab {
-    flex: 1; padding: 10px; background: none; border: none;
-    color: #8696A0; font-family: 'DM Sans', sans-serif;
-    font-size: 12px; font-weight: 600; letter-spacing: 1px;
-    text-transform: uppercase; cursor: pointer;
-    border-bottom: 2px solid transparent; transition: all 0.2s;
-  }
-  .admin-tab.active { color: var(--gold); border-bottom-color: var(--gold); background: rgba(0,229,255,0.05); }
-
-  .admin-body { flex: 1; overflow-y: auto; padding: 16px; }
-  .admin-body::-webkit-scrollbar { width: 4px; }
-  .admin-body::-webkit-scrollbar-thumb { background: #1F2C34; border-radius: 2px; }
-
-  .admin-section { display: none; }
-  .admin-section.active { display: block; }
-
-  .form-group { margin-bottom: 14px; }
-  .form-label { display: block; font-size: 11px; color: #8696A0; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
-  .form-input {
-    width: 100%; background: #0F2137; border: 1px solid #1F2C34;
-    border-radius: 8px; padding: 9px 12px; color: #E9EDEF;
-    font-family: 'DM Sans', sans-serif; font-size: 13px; outline: none; transition: border-color 0.2s;
-  }
-  .form-input:focus { border-color: var(--gold); }
-  .form-row { display: flex; gap: 10px; }
-  .form-row .form-group { flex: 1; }
-
-  .btn-primary {
-    width: 100%; background: linear-gradient(135deg, #0097A7, #00E5FF);
-    border: none; border-radius: 8px; padding: 10px; color: #0A1A2B;
-    font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
-    cursor: pointer; transition: opacity 0.2s;
-  }
-  .btn-primary:hover { opacity: 0.9; }
-
-  .parceiro-card { background: #0F2137; border: 1px solid #1F2C34; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
-  .parceiro-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-  .parceiro-nome { font-size: 14px; font-weight: 600; color: #E9EDEF; }
-  .parceiro-tipo { font-size: 10px; color: #8696A0; margin-top: 2px; }
-  .parceiro-taxa { background: rgba(0,229,255,0.15); border: 1px solid rgba(0,229,255,0.3); color: var(--gold); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
-  .parceiro-stats { display: flex; gap: 12px; margin-top: 8px; padding-top: 8px; border-top: 1px solid #1F2C34; }
-  .stat-item { flex: 1; }
-  .stat-label { font-size: 10px; color: #8696A0; }
-  .stat-value { font-size: 13px; font-weight: 600; color: #E9EDEF; }
-  .parceiro-actions { display: flex; gap: 6px; margin-top: 8px; }
-  .btn-sm { flex: 1; background: none; border: 1px solid #1F2C34; border-radius: 6px; padding: 5px 8px; color: #8696A0; font-size: 11px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: all 0.2s; }
-  .btn-sm:hover { border-color: var(--gold); color: var(--gold); }
-  .btn-sm.danger:hover { border-color: #f85149; color: #f85149; }
-
-  .lead-item { background: #0F2137; border: 1px solid #1F2C34; border-radius: 10px; padding: 12px 14px; margin-bottom: 8px; }
-  .lead-item-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-  .lead-nome { font-size: 13px; font-weight: 600; color: #E9EDEF; }
-  .lead-time { font-size: 10px; color: #8696A0; }
-  .lead-empresa { font-size: 12px; color: #8696A0; margin-bottom: 6px; }
-  .lead-comissao { display: inline-flex; align-items: center; gap: 4px; background: rgba(0,200,83,0.1); border: 1px solid rgba(0,200,83,0.25); color: #00C853; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
-  .empty-state { text-align: center; padding: 40px 20px; color: #8696A0; font-size: 13px; }
-  .empty-state .icon { font-size: 32px; margin-bottom: 8px; }
-
   @media (max-width: 768px) {
     .agente-container { max-width: 100%; }
   }
@@ -407,68 +320,6 @@
 
   <div class="reset-bar">
     <button class="reset-btn" onclick="resetChat()">↺ Reiniciar conversa</button>
-  </div>
-</div>
-
-<button class="admin-toggle" onclick="toggleAdmin()" title="Painel de Parceiros">⚙️</button>
-
-<div class="admin-panel" id="adminPanel">
-  <div class="admin-header">
-    <div class="admin-title">⚙️ PAINEL ADMIN</div>
-    <button class="admin-close" onclick="toggleAdmin()">✕</button>
-  </div>
-  <div class="admin-tabs">
-    <button class="admin-tab active" onclick="switchTab('parceiros')">👥 Parceiros</button>
-    <button class="admin-tab" onclick="switchTab('leads')">📋 Leads</button>
-    <button class="admin-tab" onclick="switchTab('comissoes')">💰 Comissões</button>
-  </div>
-  <div class="admin-body">
-    <div class="admin-section active" id="tab-parceiros">
-      <div class="form-group" style="margin-bottom:16px;">
-        <div style="font-size:12px;color:#8696A0;margin-bottom:12px;">Cadastrar novo parceiro:</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Nome</label>
-            <input class="form-input" id="p-nome" placeholder="Ex: Dr. Carlos Silva">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tipo</label>
-            <select class="form-input" id="p-tipo">
-              <option>Advogado</option>
-              <option>Contador</option>
-              <option>Consultor</option>
-              <option>Outro</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Taxa de Comissão (%)</label>
-            <input class="form-input" id="p-taxa" type="number" placeholder="Ex: 20" min="0" max="100" step="0.5">
-          </div>
-          <div class="form-group">
-            <label class="form-label">WhatsApp</label>
-            <input class="form-input" id="p-whatsapp" placeholder="(11) 99999-9999">
-          </div>
-        </div>
-        <button class="btn-primary" onclick="cadastrarParceiro()">➕ Cadastrar Parceiro</button>
-      </div>
-      <div style="font-size:11px;color:#8696A0;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Parceiros Ativos</div>
-      <div id="lista-parceiros">
-        <div class="empty-state"><div class="icon">👥</div>Nenhum parceiro cadastrado ainda.</div>
-      </div>
-    </div>
-    <div class="admin-section" id="tab-leads">
-      <div style="font-size:11px;color:#8696A0;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;">Leads Capturados</div>
-      <div id="lista-leads">
-        <div class="empty-state"><div class="icon">📋</div>Nenhum lead capturado ainda.</div>
-      </div>
-    </div>
-    <div class="admin-section" id="tab-comissoes">
-      <div id="resumo-comissoes">
-        <div class="empty-state"><div class="icon">💰</div>Em desenvolvimento</div>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -741,7 +592,7 @@ function processStep() {
 }
 
 function showFinal() {
-  registrarLeadNoPainel(userData); enviarEmailLead(userData);
+  enviarEmailLead(userData);
   addBubble(`✅ Perfeito, *${userData.nomeContato || 'prezado(a)'}*!\n\nSeus dados foram registrados com sucesso.`, 'in');
   setTimeout(() => {
     const chat = document.getElementById('chat'); const wrap = document.createElement('div'); wrap.className = 'bubble-wrap in';
@@ -819,41 +670,6 @@ function resetChat() {
   document.getElementById('chat').innerHTML = '<div class="date-divider"><span>Hoje</span></div>';
   document.getElementById('user-input').value = ''; document.getElementById('user-input').placeholder = 'Digite uma mensagem...';
   clearValidationUI(); disableInput(); setTimeout(() => processStep(), 500);
-}
-
-let parceiros = JSON.parse(localStorage.getItem('artta_parceiros') || '[]');
-let leads     = JSON.parse(localStorage.getItem('artta_leads')     || '[]');
-function salvarDados() { localStorage.setItem('artta_parceiros', JSON.stringify(parceiros)); localStorage.setItem('artta_leads', JSON.stringify(leads)); }
-function toggleAdmin() { const panel = document.getElementById('adminPanel'); panel.classList.toggle('open'); if (panel.classList.contains('open')) { renderParceiros(); renderLeads(); renderComissoes(); } }
-function switchTab(tab) {
-  document.querySelectorAll('.admin-tab').forEach((t, i) => t.classList.toggle('active', ['parceiros','leads','comissoes'][i] === tab));
-  document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active')); document.getElementById('tab-' + tab).classList.add('active');
-}
-function cadastrarParceiro() {
-  const nome = document.getElementById('p-nome').value.trim(); const tipo = document.getElementById('p-tipo').value;
-  const taxa = parseFloat(document.getElementById('p-taxa').value); const whatsapp = document.getElementById('p-whatsapp').value.trim();
-  if (!nome || isNaN(taxa)) { alert('Preencha nome e taxa.'); return; }
-  parceiros.push({ id: Date.now(), nome, tipo, taxa, whatsapp }); salvarDados();
-  document.getElementById('p-nome').value = ''; document.getElementById('p-taxa').value = ''; document.getElementById('p-whatsapp').value = ''; renderParceiros();
-}
-function removerParceiro(id) { if (!confirm('Remover?')) return; parceiros = parceiros.filter(p => p.id !== id); salvarDados(); renderParceiros(); }
-function renderParceiros() {
-  const el = document.getElementById('lista-parceiros');
-  if (!parceiros.length) { el.innerHTML = '<div class="empty-state"><div class="icon">👥</div>Nenhum parceiro</div>'; return; }
-  el.innerHTML = parceiros.map(p => {
-    const leadsCount = leads.filter(l => l.parceiro && l.parceiro.toLowerCase() === p.nome.toLowerCase()).length;
-    return `<div class="parceiro-card"><div class="parceiro-card-top"><div><div class="parceiro-nome">${p.nome}</div><div class="parceiro-tipo">${p.tipo}</div></div><div class="parceiro-taxa">${p.taxa}%</div></div><div class="parceiro-stats"><div class="stat-item"><div class="stat-label">Leads</div><div class="stat-value">${leadsCount}</div></div></div><div class="parceiro-actions"><button class="btn-sm danger" onclick="removerParceiro(${p.id})">🗑️ Remover</button></div></div>`;
-  }).join('');
-}
-function renderLeads() {
-  const el = document.getElementById('lista-leads');
-  if (!leads.length) { el.innerHTML = '<div class="empty-state"><div class="icon">📋</div>Nenhum lead</div>'; return; }
-  el.innerHTML = [...leads].reverse().map(l => `<div class="lead-item"><div class="lead-item-top"><div class="lead-nome">👤 ${l.nome || '—'}</div><div class="lead-time">${l.hora || '—'}</div></div><div class="lead-empresa">🏢 ${l.razao || '—'} • ${l.cnpj || '—'}</div><div style="font-size:12px;color:#8696A0;">📱 ${l.telefone || '—'} • 📧 ${l.email || '—'}</div>${l.parceiro ? `<div style="font-size:12px;color:#8696A0;">🤝 Parceiro: ${l.parceiro}</div>` : ''}</div>`).join('');
-}
-function renderComissoes() { document.getElementById('resumo-comissoes').innerHTML = '<div class="empty-state"><div class="icon">💰</div>Em desenvolvimento</div>'; }
-function registrarLeadNoPainel(data) {
-  const lead = { id: Date.now(), nome: data.nomeContato, telefone: data.telefone, email: data.email, cnpj: data.cnpj, razao: data.razao, tipoRestricao: data.tipoRestricao || null, parceiro: data.parceiro || null, hora: new Date().toLocaleString('pt-BR') };
-  leads.push(lead); salvarDados();
 }
 
 // Inicializar o chat
