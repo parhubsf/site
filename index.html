@@ -1614,7 +1614,7 @@
                     });
                     const result = await response.json();
                     if (!response.ok || (result && result.success === 'false')) throw new Error(result?.message || 'Erro ao enviar mensagem.');
-                    showToast('✅', '✅ Informações enviadas com sucesso! Em breve entraremos em contato.');
+                    showToast(' '✅ Informações enviadas com sucesso! Em breve entraremos em contato.');
                     form.reset();
                 } catch (error) {
                     console.error('Erro no envio:', error);
@@ -1677,7 +1677,7 @@
             };
             function getExpertEmails(service) {
                 if (service === 'Consórcios') return ['Leonardoarmansa@gmail.com', 'Thalyson@parhub.com.br'];
-                if (service === 'Contabilidade Especializada') return ['Thalyson.ffs@gmail.com', 'Thalyson@parhub.com.br'];
+                if (service === 'Contabilidade Especializada') return ['fernanda@contsut.com.br', 'Thalyson@parhub.com.br'];
             }
             async function sendEmailToExperts(service, nome, whatsapp, email) {
                 if (isLocal) {
