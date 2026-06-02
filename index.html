@@ -91,6 +91,7 @@
                 padding: 10px 20px;
                 display: inline-block;
                 text-align: center;
+                
                 margin-top: 10px;
                 font-weight: 600;
                 text-decoration: none;
@@ -1676,10 +1677,14 @@
             };
             function getExpertEmails(service) {
                 if (service === 'Consórcios') return ['Leonardoarmansa@gmail.com', 'Thalyson@parhub.com.br'];
+                if (service === 'Contabilidade Especializada') return [' fernanda@contsut.com.br'];
                 return ['Thalyson@parhub.com.br'];
             }
             async function sendEmailToExperts(service, nome, whatsapp, email) {
-                if (isLocal) return true;
+                if (isLocal) {
+                    console.log('[Simulação] E-mail enviado para:', getExpertEmails(service));
+                    return true;
+                }
                 const recipients = getExpertEmails(service);
                 const payload = {
                     nome, whatsapp, email, servico: service,
