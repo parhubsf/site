@@ -1432,7 +1432,7 @@
                         </li>
                         <li>
                             <a href="https://wa.me/5511992007886" target="_blank" aria-label="Link para o Whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
+                                <i class="fa-brands fa-whatsapp"></i> 
                             </a>
                         </li>
                     </ul>
@@ -1594,7 +1594,7 @@
                 }
                 if (isDev) {
                     console.log('[Simulação] Dados do formulário:', data);
-                    showToast('✅', ' Informações enviadas com sucesso! (Simulação) Em breve entraremos em contato.');
+                    showToast('✅', '✅ Informações enviadas com sucesso! (Simulação) Em breve entraremos em contato.');
                     form.reset();
                     return;
                 }
@@ -1614,7 +1614,7 @@
                     });
                     const result = await response.json();
                     if (!response.ok || (result && result.success === 'false')) throw new Error(result?.message || 'Erro ao enviar mensagem.');
-                    showToast('✅', 'Informações enviadas com sucesso! Em breve entraremos em contato.');
+                    showToast('✅', '✅ Informações enviadas com sucesso! Em breve entraremos em contato.');
                     form.reset();
                 } catch (error) {
                     console.error('Erro no envio:', error);
@@ -1677,7 +1677,8 @@
             };
             function getExpertEmails(service) {
                 if (service === 'Consórcios') return ['Leonardoarmansa@gmail.com', 'Thalyson@parhub.com.br'];
-                if (service === 'Contabilidade Especializada') return ['fernanda@contsut.com.br', 'Thalyson@parhub.com.br'];
+                if (service === 'Contabilidade Especializada') return ['Thalyson.ffs@gmail.com'];
+                return ['Thalyson@parhub.com.br'];
             }
             async function sendEmailToExperts(service, nome, whatsapp, email) {
                 if (isLocal) {
@@ -1690,23 +1691,18 @@
                     _subject: `Lead de ${service} - ${nome}`,
                     _replyto: email, _template: 'table', _captcha: 'false'
                 };
-                let successCount = 0;
+                let allSuccess = true;
                 for (const dest of recipients) {
                     try {
                         const response = await fetch(`https://formsubmit.co/ajax/${dest}`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                             body: JSON.stringify(payload)
                         });
-                        const result = await response.json().catch(() => null);
-                        if (response.ok && (!result || result.success !== 'false')) {
-                            successCount++;
-                        }
-                    } catch (err) {
-                        // falha individual, ignora
-                    }
+                        const result = await response.json();
+                        if (!response.ok || (result && result.success === 'false')) allSuccess = false;
+                    } catch { allSuccess = false; }
                 }
-                return successCount > 0;
+                return allSuccess;
             }
             function addMessage(text, isUser = false) {
                 const div = document.createElement('div');
@@ -1739,12 +1735,32 @@
                         setResetButtonVisibility();
                         return;
                     } else {
+                        // Serviços que vão para o menu de confirmação
+                        if (choice === 'Antecipação de Recebíveis' || choice === 'Home Equity' || choice === 'Recuperação de Créditos') {
+                            selectedService = choice;
+                            addMessage(`Você escolheu <strong>${choice}</strong>. Deseja falar diretamente com um especialista ou conhecer outros serviços?`, false);
+                            addOptions(['💬 Falar com especialista', '🔍 Ver outros serviços']);
+                            currentState = 'waitingDirectAction';
+                            setResetButtonVisibility();
+                            return;
+                        }
+                        // Outros serviços mantêm as opções
                         currentState = 'waitingAction';
                         addMessage(`Ótimo! Você escolheu <strong>${choice}</strong>. Como deseja prosseguir?`);
                         addOptions(['🌐 Visitar site do parceiro', '💬 Falar com especialista']);
                         setResetButtonVisibility();
                         return;
                     }
+                } else if (currentState === 'waitingDirectAction') {
+                    if (choice === '💬 Falar com especialista') {
+                        addMessage(`📞 Redirecionando você para falar com nosso especialista via WhatsApp.`, false);
+                        setTimeout(() => {
+                            window.open('https://wa.me/5511992007886', '_blank');
+                        }, 1000);
+                    } else if (choice === '🔍 Ver outros serviços') {
+                        resetChat();
+                    }
+                    return;
                 } else if (currentState === 'waitingEscrowAction') {
                     if (choice === 'Abrir conta') {
                         addMessage(`🔗 Redirecionando você para abrir sua conta em uma nova aba. Aguarde...`, false);
